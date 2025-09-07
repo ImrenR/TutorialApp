@@ -23,7 +23,8 @@ A simple and interactive web app to manage tutorials using React, Vite, Axios, a
 
 ## Preview
 
-[View]("https://github.com/user-attachments/assets/d56b90f6-9ab6-4de8-8abc-50c74603934d")
+[View](https://github.com/user-attachments/assets/d56b90f6-9ab6-4de8-8abc-50c74603934d)
+
 ---
 
 ## Tech Stack
