@@ -2,8 +2,12 @@ import { MdDeleteOutline } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import axios from "axios";
 import EditTutorials from "./EditTutorials";
+import { useState } from "react";
 
 const TutorialList = ({ tutorials, getTutorials }) => {
+
+  const [editData, setEditData] = useState("");
+
   const deleteTutorials = async (id) => {
     try {
       await axios.delete(`${import.meta.env.VITE_APP_URL}${id}/`);
@@ -13,6 +17,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
       getTutorials();
     }
   };
+
 
   return (
     <div>
@@ -32,7 +37,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
           </tr>
         </thead>
         <tbody>
-          {tutorials.map((item) => {
+          {tutorials?.map((item) => {
             const { id, title, description } = item;
             return (
               <tr className="bg-light">
@@ -44,7 +49,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
                     type="submit"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
-                    onClick={}
+                    onClick={()=>setEditData(item)}
                   >
                     <CiEdit size={22} className="me-2 btn-warning" />
                   </button>
@@ -57,7 +62,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
           })}
         </tbody>
       </table>
-      <EditTutorials/>
+      <EditTutorials editData={editData} getTutorials={getTutorials}/>
     </div>
   );
 };

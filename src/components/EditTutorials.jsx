@@ -7,23 +7,37 @@
 //! aktarmak istersek useEffect hook'unu componentDidUpdate
 //! gibi kullanabiriz.
 
+import { useState,useEffect } from "react";
+import axios from "axios";
 
+const EditTutorials = ({ editData, getTutorials }) => {
+  const [title, setTitle] = useState(editData.title);
+  const [description, setDescription] = useState(editData.description);
 
+  useEffect(() => {
+    setTitle(editData.title);
+    setDescription(editData.description);
+  }, [editData]);
 
-
-
-import { useState } from "react";
-
-const EditTutorials = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    editTutorials({ title, description });
+  };
+
+  const editTutorials = async (tutorial) => {
+    try {
+      await axios.put(
+        `${import.meta.env.VITE_APP_URL}${editData.id}/`,
+        tutorial
+      );
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTutorials();
+    }
   };
   return (
     <>
-     
-      {/* Modal */}
       <div
         className="modal fade"
         id="exampleModal"
