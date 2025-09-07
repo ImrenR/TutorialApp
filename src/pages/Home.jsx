@@ -27,8 +27,8 @@ const [tutorials, setTutorials] = useState([])
   
   return (
     <div>
-      <AddTutorial />
-      <TutorialList tutorials={tutorials} />
+      <AddTutorial getTutorials={getTutorials}/>
+      <TutorialList tutorials={tutorials} getTutorials={getTutorials} />
     </div>
   );
 };

@@ -1,10 +1,23 @@
 import { MdDeleteOutline } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import axios from "axios";
-import { useState } from "react";
 
-const TutorialList = ({tutorials}) => {
- 
+
+
+const TutorialList = ({tutorials, getTutorials}) => {
+
+
+const deleteTutorials = async(id)=> {
+ try {
+      await axios.delete(`${import.meta.env.VITE_APP_URL}${id}/`);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTutorials();
+    }
+}
+
+
   return (
     <div>
       <table className="table">
@@ -34,7 +47,9 @@ const TutorialList = ({tutorials}) => {
               <button type="submit">
                 <CiEdit size={22} className="me-2 btn-warning" />
               </button>
-              <button type="submit">
+              <button 
+              type="submit"
+              onClick={()=>deleteTutorials(id)}>
                 <MdDeleteOutline size={22} className="text-danger" />
               </button>
             </td>
