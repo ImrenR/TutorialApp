@@ -4,15 +4,15 @@ A simple and interactive web app to manage tutorials using React, Vite, Axios, a
 
 ## Features
 
-Add Tutorials – Users can create new tutorials with title and description.
+- Add Tutorials – Users can create new tutorials with title and description.
 
-View Tutorials – All tutorials are displayed in a table with ID, title, and description.
+- View Tutorials – All tutorials are displayed in a table with ID, title, and description.
 
-Edit Tutorials – Update existing tutorials through a modal interface.
+- Edit Tutorials – Update existing tutorials through a modal interface.
 
-Delete Tutorials – Remove tutorials with a single click.
+- Delete Tutorials – Remove tutorials with a single click.
 
-Responsive Design – Built with Bootstrap for mobile-friendly UI.
+- Responsive Design – Built with Bootstrap for mobile-friendly UI.
 
 REST API Integration – Interacts with a backend API using Axios.
 
