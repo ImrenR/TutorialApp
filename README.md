@@ -1,12 +1,83 @@
-# React + Vite
+# React Tutorial Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive web app to manage tutorials using React, Vite, Axios, and Bootstrap. Users can add, view, edit, and delete tutorials in a clean, responsive interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Add Tutorials – Users can create new tutorials with title and description.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- View Tutorials – All tutorials are displayed in a table with ID, title, and description.
+
+- Edit Tutorials – Update existing tutorials through a modal interface.
+
+- Delete Tutorials – Remove tutorials with a single click.
+
+- Responsive Design – Built with Bootstrap for mobile-friendly UI.
+
+- REST API Integration – Interacts with a backend API using Axios.
+
+---
+
+## Tech Stack
+
+- Frontend: React, Vite, Axios, Bootstrap
+
+- Icons: react-icons
+
+- Backend: REST API (any backend you connect to)
+
+---
+
+## Getting Started
+1. Clone the repository
+git clone https://github.com/your-username/react-tutorial-manager.git
+cd react-tutorial-manager
+
+2. Install dependencies
+npm install
+
+3. Set up environment variables
+
+Create a .env file in the project root:
+
+VITE_APP_URL=https://your-api-endpoint.com/tutorials/
+
+4. Run the development server
+npm run dev
+
+
+Open http://localhost:5173
+ in your browser.
+
+---
+
+## Project Structure
+```
+my-project/
+│── public/
+│── src/
+│   ├── components/
+│   │   ├── AddTutorial.jsx
+│   │   ├── TutorialList.jsx
+│   │   └── EditTutorial.jsx
+│   ├── App.jsx
+│   └── main.jsx
+│── .env
+│── index.html
+│── package.json
+│── vite.config.js
+```
+
+---
+
+## How It Works
+
+- Add a Tutorial – Fill the form in AddTutorial and submit.
+
+- View Tutorials – All tutorials fetched from API are displayed in TutorialList.
+
+- Edit a Tutorial – Click the edit icon, modify the fields in the modal, and save.
+
+- Delete a Tutorial – Click the delete icon to remove a tutorial.
