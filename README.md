@@ -54,6 +54,8 @@ my-project/
 │   │   ├── AddTutorial.jsx
 │   │   ├── TutorialList.jsx
 │   │   └── EditTutorial.jsx
+│   ├── pages/
+│   │   └── Home.jsx      <-- moved here
 │   ├── App.jsx
 │   └── main.jsx
 │── .env
