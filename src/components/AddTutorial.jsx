@@ -9,6 +9,7 @@ return(
    <>
    <form>
   <div className="mb-3">
+    <h1 className="text-danger">Add Your Tutorial </h1>
     <label htmlFor="exampleFormControlInput1" className="form-label">
       Title
     </label>
