@@ -18,11 +18,11 @@ REST API Integration – Interacts with a backend API using Axios.
 
 ## Tech Stack
 
-Frontend: React, Vite, Axios, Bootstrap
+- Frontend: React, Vite, Axios, Bootstrap
 
-Icons: react-icons
+- Icons: react-icons
 
-Backend: REST API (any backend you connect to)
+- Backend: REST API (any backend you connect to)
 
 ##  Getting Started
 1. Clone the repository
@@ -63,17 +63,15 @@ my-project/
 │── package.json
 │── vite.config.js
 ```
-## Screenshots
 
-Optional: Add screenshots or GIFs showing the app in action.
 
 ## How It Works
 
-Add a Tutorial – Fill the form in AddTutorial and submit.
+- Add a Tutorial – Fill the form in AddTutorial and submit.
 
-View Tutorials – All tutorials fetched from API are displayed in TutorialList.
+- View Tutorials – All tutorials fetched from API are displayed in TutorialList.
 
-Edit a Tutorial – Click the edit icon, modify the fields in the modal, and save.
+- Edit a Tutorial – Click the edit icon, modify the fields in the modal, and save.
 
-Delete a Tutorial – Click the delete icon to remove a tutorial.
+- Delete a Tutorial – Click the delete icon to remove a tutorial.
 
