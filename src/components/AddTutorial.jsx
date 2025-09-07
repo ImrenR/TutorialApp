@@ -4,6 +4,11 @@
 
 
 const AddTutorial = () => {
+
+
+
+
+  
 return( 
  
    <>
@@ -16,8 +21,9 @@ return(
     <input
       type="text"
       className="form-control"
-      id="exampleFormControlInput1"
+      id="title"
       placeholder="Enter your title"
+      required
     />
   </div>
   <div className="mb-3">
@@ -26,9 +32,10 @@ return(
     </label>
     <textarea
       className="form-control"
-      id="exampleFormControlTextarea1"
+      id="desc"
       rows={1}
       placeholder="Enter your Description"
+      required
     />
   </div>
   <button type="submit" class="btn btn-danger">Submit</button>
