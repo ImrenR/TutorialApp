@@ -3,7 +3,7 @@ import { CiEdit } from "react-icons/ci";
 import axios from "axios";
 import { useState } from "react";
 
-const TutorialList = () => {
+const TutorialList = ({tutorials}) => {
  
   return (
     <div>
@@ -23,10 +23,13 @@ const TutorialList = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-light">
-            <th scope="row">id</th>
-            <td>title</td>
-            <td>description</td>
+          {tutorials.map((item)=> {
+            const {id, title, description} = item
+            return (
+     <tr className="bg-light">
+            <th scope="row">{id}</th>
+            <td>{title}</td>
+            <td>{description}</td>
             <td className="text-center text-nowrap">
               <button type="submit">
                 <CiEdit size={22} className="me-2 btn-warning" />
@@ -36,6 +39,9 @@ const TutorialList = () => {
               </button>
             </td>
           </tr>
+            )
+          })}
+     
         </tbody>
       </table>
     </div>

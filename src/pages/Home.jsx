@@ -1,26 +1,36 @@
-import AddTutorial from "../components/AddTutorial"
-import TutorialList from "../components/TutorialList"
-import axios from "axios"
-
+import AddTutorial from "../components/AddTutorial";
+import TutorialList from "../components/TutorialList";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 
 const Home = () => {
-
-const getTutorial = async()=>{
-  try {
-    const result = await axios.get(import.meta.env.VITE_APP_URL)
-    console.log(result)
-  } catch (error) {
-    console.log(error)
+  // To able to see the data in UI we need to useState and store them there
+//! either use blank array since the data in array, or use ? when you do mapping
+const [tutorials, setTutorials] = useState([])
+  //?Collect all data here and share with the list
+  const getTutorials= async()=> {
+    try {
+       const {data}= await axios.get(import.meta.env.VITE_APP_URL)
+       setTutorials(data) // set the data
+    } catch (error) {
+      console.log(error)
+    }
+ 
   }
-}
-getTutorial();
+ 
+ //function invoked
+  //! to avoid from the loop we have to use useEffect and render only once
+  useEffect(() => {
+   getTutorials(); 
+  }, [])
+  
+  return (
+    <div>
+      <AddTutorial />
+      <TutorialList tutorials={tutorials} />
+    </div>
+  );
+};
 
-
-  return <div>
-<AddTutorial/>
-<TutorialList/>
-  </div>
-}
-
-export default Home
+export default Home;
