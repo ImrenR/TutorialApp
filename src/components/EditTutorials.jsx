@@ -1,3 +1,17 @@
+//? https://react.dev/reference/react/useState#usestate
+//! State degiskeninin degeri, 1.render ile initialState
+//! parametresinin ilk degerini alir. Dolayisiyle bu durumda
+//! prop'tan gelen ilk deger state'e aktarilir.
+//! Sonradan degisen props degerleri useState'e aktarilmaz.
+//! Eger props'tan gelen degerleri her degisimde useState'e
+//! aktarmak istersek useEffect hook'unu componentDidUpdate
+//! gibi kullanabiriz.
+
+
+
+
+
+
 import { useState } from "react";
 
 const EditTutorials = () => {
@@ -8,15 +22,7 @@ const EditTutorials = () => {
   };
   return (
     <>
-      {/* Button trigger modal */}
-      <button
-        type="button"
-        className="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Launch demo modal
-      </button>
+     
       {/* Modal */}
       <div
         className="modal fade"

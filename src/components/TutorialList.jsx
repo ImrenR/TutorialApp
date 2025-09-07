@@ -44,6 +44,7 @@ const TutorialList = ({ tutorials, getTutorials }) => {
                     type="submit"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
+                    onClick={}
                   >
                     <CiEdit size={22} className="me-2 btn-warning" />
                   </button>
