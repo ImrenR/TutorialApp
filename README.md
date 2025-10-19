@@ -37,29 +37,6 @@ A simple and interactive web app to manage tutorials using React, Vite, Axios, a
 
 ---
 
-## Getting Started
-1. Clone the repository
-git clone https://github.com/imrenr/react-tutorial-manager.git
-cd react-tutorial-manager
-
-2. Install dependencies
-npm install
-
-3. Set up environment variables
-
-Create a .env file in the project root:
-
-VITE_APP_URL=https://your-api-endpoint.com/tutorials/
-
-4. Run the development server
-npm run dev
-
-
-Open http://localhost:5173
- in your browser.
-
----
-
 ## Project Structure
 ```
 my-project/
