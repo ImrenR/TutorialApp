@@ -39,7 +39,7 @@ A simple and interactive web app to manage tutorials using React, Vite, Axios, a
 
 ## Getting Started
 1. Clone the repository
-git clone https://github.com/your-username/react-tutorial-manager.git
+git clone https://github.com/imrenr/react-tutorial-manager.git
 cd react-tutorial-manager
 
 2. Install dependencies
